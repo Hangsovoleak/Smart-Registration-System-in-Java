@@ -96,7 +96,7 @@ public class Main {
 
     public static void viewUser() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("/home/hangsovoleak/Desktop/BackEndJAVA/S2/Exception/SmartRegintrationSystem/users.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("users.txt"));
             String line;
 
             System.out.println("\n--- Registered Users ---");
@@ -139,7 +139,7 @@ public class Main {
                 return;
             }
 
-            FileWriter writer = new FileWriter("/home/hangsovoleak/Desktop/BackEndJAVA/S2/Exception/SmartRegintrationSystem/users.txt");
+            FileWriter writer = new FileWriter("users.txt");
 
             for (User u: users) {
                 writer.write(u.toString() + "\n");
@@ -156,7 +156,7 @@ public class Main {
         List<User> users = new ArrayList<>();
 
         try (BufferedReader reader =
-                new BufferedReader(new FileReader("/home/hangsovoleak/Desktop/BackEndJAVA/S2/Exception/SmartRegintrationSystem/users.txt"))) {
+                new BufferedReader(new FileReader("users.txt"))) {
             String line;
 
             while ((line = reader.readLine()) != null) {
